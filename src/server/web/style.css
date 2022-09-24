@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+.main-text {
+  font-family: Inconsolata;
+  font-size: 36px;
+  margin: 8px;
+}
