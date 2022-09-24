@@ -1,4 +1,4 @@
-# Typescript Node + client with edit-refresh.
+# Nikhil's website code
 
 ### Dev setup
 
