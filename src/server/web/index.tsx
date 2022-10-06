@@ -2,7 +2,7 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 
-const TEXT = "Nikhil Thorat";
+const TEXT = "NIKHIL THORAT";
 
 async function main() {
   console.log("hello world");
@@ -23,10 +23,13 @@ function App(): JSX.Element {
 
   requestAnimationFrame(async () => {
     //let cont = true;
+    if (randomChar() != null) {
+      //return;
+    }
 
     let textIndex = 0;
     let frameIndex = 0;
-    const frameRate = 5;
+    const frameRate = 3;
 
     // First animation coming in.
     while (textIndex < TEXT.length) {
@@ -46,29 +49,84 @@ function App(): JSX.Element {
     }
     console.log("tliching");
 
-    // Glitch animation.
-    frameIndex = 0;
+    // // Glitch animation.
+    // frameIndex = 0;
 
-    let cont = true;
-    let glitchFrameLength = 2;
-    while (cont) {
-      let finalText = TEXT.split("");
+    // let cont = true;
+    // let glitchFrameLength = 2;
+    // while (cont) {
+    //   let finalText = TEXT.split("");
 
-      if (Math.floor(Math.random() * 100) < 5) {
-        finalText[Math.floor(Math.random() * TEXT.length)] = randomChar();
-        for (let i = 0; i < glitchFrameLength; i++) {
-          inputEl.current!.innerText = finalText.join("");
-          await nextFrame();
-        }
-      }
-      inputEl.current!.innerText = TEXT;
-      await nextFrame();
-    }
+    //   if (Math.floor(Math.random() * 100) < 5) {
+    //     finalText[Math.floor(Math.random() * TEXT.length)] = randomChar();
+    //     for (let i = 0; i < glitchFrameLength; i++) {
+    //       inputEl.current!.innerText = finalText.join("");
+    //       await nextFrame();
+    //     }
+    //   }
+    //   inputEl.current!.innerText = TEXT;
+    //   await nextFrame();
+    // }
   });
 
   return (
-    <div className="main-text" ref={inputEl}>
-      Nikhil Thorat
+    <div className="main-wrapper">
+      <header>
+        <div className="header-container">
+          <div className="header">
+            <div className="name-text-container">
+              <div className="name-text" ref={inputEl}>
+                NIKHIL THORAT
+              </div>
+            </div>
+          </div>
+          <div className="header-nav">
+            <nav>
+              <ul>
+                <li className="selected-nav">
+                  <a href="www.google.com">
+                    <span className="nav-text">bio</span>
+                  </a>
+                </li>
+                <li>projects</li>
+                <li>music</li>
+                <li>experiments</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div className="subheader-container">
+          <div className="subheader">software, music, art</div>
+        </div>
+      </header>
+      <div className="header-separator"></div>
+      <div className="main-content">
+        <div className="main-content-row">
+          <div className="main-content-row-title">about</div>
+          <div className="main-content-row-body">
+            <p>I am a software engineer, musician, and playful tinkerer.</p>
+            <br />
+            <p>
+              I currently work at Google and co-lead the{" "}
+              <a href="https://knowyourdata.withgoogle.com/">Know Your Data</a> project under the{" "}
+              <a href="https://ai.google/responsibilities/">Responsible AI</a> org.
+            </p>
+          </div>
+        </div>
+        <div className="main-content-row">
+          <div className="main-content-row-title">selected projects</div>
+          <div className="main-content-row-body">
+            <p>
+              <video className="home-card-video" loop={true} autoPlay={true} muted={true}>
+                <source
+                  src="https://knowyourdata.withgoogle.com//assets/videos/filter-beaver.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
