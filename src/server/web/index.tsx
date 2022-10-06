@@ -107,15 +107,23 @@ function App(): JSX.Element {
             <p>I am a software engineer, musician, and playful tinkerer.</p>
             <br />
             <p>
-              I currently work at Google and co-lead the{" "}
+              I've been working at Google for 10 years and co-lead the{" "}
               <a href="https://knowyourdata.withgoogle.com/">Know Your Data</a> project under the{" "}
               <a href="https://ai.google/responsibilities/">Responsible AI</a> org.
+            </p>
+            <br />
+            <p>
+              I also co-created <a href="http://js.tensorflow.org">TensorFlow.js</a>, a library for
+              machine learning in JavaScript.
             </p>
           </div>
         </div>
         <div className="main-content-row">
           <div className="main-content-row-title">selected projects</div>
           <div className="main-content-row-body">
+            <p>
+              <img src="https://smilkov.com/static/images/tfjs.png"></img>
+            </p>
             <p>
               <video className="home-card-video" loop={true} autoPlay={true} muted={true}>
                 <source
